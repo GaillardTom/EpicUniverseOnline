@@ -50,7 +50,11 @@ app.get("/api/nasa-rss", async (req: Request, res: Response) => {
 
 
 })
+app.get("/", function (req: Request, res: Response) {
 
+  res.send("API for NASA RSS feed");
+
+});
 // app.use(express.static(path.join(__dirname, '..', 'build')));
 
 
