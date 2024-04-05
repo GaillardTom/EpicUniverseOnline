@@ -3,7 +3,6 @@ import dotenv from "dotenv";
 import cors from "cors";
 import Parser from 'rss-parser';
 import path from 'path'
-// import path from 'path-browserify';
 // create a new parser object
 const parser = new Parser();
 
@@ -23,9 +22,9 @@ interface Feed {
   content: string;
  } 
 
-// app.get('/', function (req: Request, res: Response) {
-//   res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
-// });
+app.get('*', function (req: Request, res: Response) {
+  res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
+});
 //New endpoint for the rss feed
 app.get("/api/nasa-rss", async (req: Request, res: Response) => {
 
