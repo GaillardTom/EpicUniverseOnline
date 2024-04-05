@@ -52,6 +52,6 @@ app.get("/nasa-rss", async (req: Request, res: Response) => {
 
 
 })
-app.listen('', () => {
+app.listen(port, () => {
   // console.log(`[server]: Server is running at localhost:${port}`);
 });
