@@ -5,7 +5,7 @@ import initialState from 'react'
 import axios from 'axios';
 
 // const url = "http://localhost:9090" 
-const url = "https://epicuniverseonline.web.app:9090"
+const url = "https://epicuniverseonline.web.app"
 
 
 function App() {
