@@ -2,7 +2,7 @@ import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import Parser from 'rss-parser';
-import path from 'path'
+// import path from 'path'
 // create a new parser object
 const parser = new Parser();
 
@@ -59,5 +59,5 @@ app.get("/", function (req: Request, res: Response) {
 
 
 app.listen(port, () => {
-  // console.log(`[server]: Server is running at localhost:${port}`);
+  console.log(`[server]: Server is running at localhost:${port}`);
 });
