@@ -4,7 +4,8 @@ import React, { useState,  useEffect } from 'react';
 import initialState from 'react'
 import axios from 'axios';
 
-const url = "https://epicuniverseonline.web.app:9090" 
+// const url = "http://localhost:9090" 
+const url = "https://epicuniverseonline.web.app:9090"
 
 
 function App() {

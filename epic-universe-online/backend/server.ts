@@ -14,7 +14,7 @@ app.use(cors())
 app.use(express.static(path.join(__dirname, '..', 'build')));
 
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 //Creates an interface for the feed
 interface Feed {
   title: string;
