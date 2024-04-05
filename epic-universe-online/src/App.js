@@ -4,8 +4,8 @@ import React, { useState,  useEffect } from 'react';
 import initialState from 'react'
 import axios from 'axios';
 
-// const url = "http://localhost:9090" 
-const url = "https://epic-universe-online.vercel.app"
+const url = "http://localhost:9090" 
+// const url = "https://epic-universe-online-jyl2qv9sv-gaillardtom.vercel.app"
 
 
 function App() {
