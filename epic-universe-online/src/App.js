@@ -4,8 +4,8 @@ import React, { useState,  useEffect } from 'react';
 import initialState from 'react'
 import axios from 'axios';
 
-const url = "http://localhost" 
-// const url = "https://epicuniverseonline.web.app"
+// const url = "http://localhost:9090" 
+const url = "https://epicuniverseonline.web.app"
 
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
     const getFeed = async () => {
 
       try {
-        const res = await axios.get(url + "/nasa-rss");
+        const res = await axios.get(url + "/api/nasa-rss");
         console.log(res.data);
         setFeed(res.data);
       } catch (error) {

@@ -28,7 +28,7 @@ app.get('/', function (req: Request, res: Response) {
   res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
 });
 //New endpoint for the rss feed
-app.get("/nasa-rss", async (req: Request, res: Response) => {
+app.get("/api/nasa-rss", async (req: Request, res: Response) => {
 
   // parse the feed
   console.log("Getting RSS feed")
