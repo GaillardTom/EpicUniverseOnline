@@ -11,7 +11,6 @@ dotenv.config();
 
 const app: Express = express();
 app.use(cors())
-app.use(express.static(path.join(__dirname, '..', 'build')));
 
 
 const port = process.env.PORT;
@@ -52,6 +51,9 @@ app.get("/api/nasa-rss", async (req: Request, res: Response) => {
 
 
 })
+
+app.use(express.static(path.join(__dirname, '..', 'build')));
+
 app.listen(port, () => {
   // console.log(`[server]: Server is running at localhost:${port}`);
 });
