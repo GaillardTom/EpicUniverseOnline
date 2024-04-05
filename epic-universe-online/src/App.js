@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import React, { useState, initialState, useEffect } from 'react';
+import React, { useState,  useEffect } from 'react';
+import initialState from 'react'
 import axios from 'axios';
 
 
@@ -8,7 +9,7 @@ import axios from 'axios';
 function App() {
   
   
-  const [feed, setFeed] = useState(initialState);
+  const [feed, setFeed] = useState([]);
   useEffect(() => {
 
 
@@ -33,6 +34,9 @@ function App() {
   const showFeed = () => {
 
     // Put the feed in a list of cards to show in the frontend:
+    if (!feed) {
+      return 'No feed available';
+    }
     return feed.map((item, index) => {
       return (
         <div  className="card" key={index}>

@@ -2,7 +2,7 @@ import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import Parser from 'rss-parser';
-
+import path from 'path';
 // create a new parser object
 const parser = new Parser();
 
@@ -10,6 +10,9 @@ dotenv.config();
 
 const app: Express = express();
 app.use(cors())
+app.use(express.static('../build'));
+
+
 const port = process.env.PORT || 3000;
 //Creates an interface for the feed
 interface Feed {
@@ -20,10 +23,9 @@ interface Feed {
   content: string;
  } 
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("Express + TypeScript Server");
+app.get('/', function (req: Request, res: Response) {
+  res.sendFile(path.join('../build', 'index.html'));
 });
-
 //New endpoint for the rss feed
 app.get("/nasa-rss", async (req: Request, res: Response) => {
 
