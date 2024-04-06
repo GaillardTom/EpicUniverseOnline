@@ -3,6 +3,9 @@ import './App.css';
 import React, { useState,  useEffect } from 'react';
 import initialState from 'react'
 import axios from 'axios';
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
+
 
 // const url = "http://localhost:9090" 
 const url = "https://epic-universe-online-server.vercel.app"
@@ -58,6 +61,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         {feed ? showFeed() : 'Loading...'}
+        <SpeedInsights />
+        <Analytics />
       </header>
     </div>
   );
