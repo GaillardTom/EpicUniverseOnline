@@ -40,7 +40,7 @@ const [feed, setFeed] = useState([]);
         observer.unobserve(card);
       });
     };
-  }, []);
+  }, [feed]);
 
   useEffect(() => {
 
