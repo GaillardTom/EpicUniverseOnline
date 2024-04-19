@@ -1,0 +1,62 @@
+.footer{ 
+
+    display: flex;
+    flex-direction: row;
+    bottom: 0;
+    right: 1%; 
+    color:antiquewhite;
+    position: fixed;
+    font-size: xx-small;
+    font-family: Lucida Console, Monaco, monospace;
+    margin-top: 5px;
+    text-wrap: none;
+    white-space: nowrap;
+    animation: fadeIn 2s; /* Add fade-in animation */
+
+}
+.footer-image:hover {
+    transform: scale(1.1) rotate(10deg); /* Add this block */
+}
+.footer a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+}
+
+.footer:hover {
+    color: gray; /* Add this block */
+}
+.footer-image{ 
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+
+    transition: transform 0.3s ease-in-out; /* Add this line */
+}
+
+@media screen and (max-width: 768px){
+    .footer{
+        display: none;
+        flex-direction: row;
+        bottom: 0;
+        right: 5%; 
+        color:antiquewhite;
+        position: fixed;
+        font-size: 15px;
+        font-style: italic;
+        white-space: nowrap;
+        animation: fadeIn 2s; /* Add fade-in animation */
+
+    }   
+    .footer-image:hover {
+        transform: scale(1.1); /* Add this block */
+    }
+}
+
+
+/* KeyFrames animation */
+
+@keyframes fadeIn {
+    0% {opacity: 0; transform: translateY(100%);}
+    100% {opacity: 1; transform: translateY(0);}
+}

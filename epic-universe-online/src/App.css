@@ -29,6 +29,8 @@
 
 .card{
   background-color: #0c001a3b;
+  animation: slideIn 1s ease-out;
+  visibility: hidden;
   /* background-color: #1a1a1d; */
 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -96,4 +98,18 @@
   .card {
     width: 90%; /* adjust card width for small screens */
   }
+}
+
+
+/* KeyFrames animation */
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
